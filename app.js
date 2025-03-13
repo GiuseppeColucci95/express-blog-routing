@@ -7,7 +7,7 @@ const app = express();
 //create server port
 const port = 3000;
 
-//import routers
+//import router
 const postsRouter = require('./routers/posts');
 
 //start server listening

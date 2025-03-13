@@ -15,7 +15,7 @@ app.listen(port, () => {
   console.log(`🟢 Server start running on port http://localhost:${port}`);
 });
 
-//home router
+//home route
 app.get('/', (req, res) => {
   res.send("Welcome to our Server!");
 });
