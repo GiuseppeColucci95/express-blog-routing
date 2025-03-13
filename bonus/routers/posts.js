@@ -4,14 +4,22 @@ const express = require('express');
 //create an instance of express.Router
 const router = express.Router();
 
+//import posts data
+const posts = require('../posts');
+
 //index
 router.get('/', (req, res) => {
-  res.send("Post list");
+  //return all the posts array
+  res.json(posts);
 });
 
 //show
 router.get('/:slug', (req, res) => {
-  res.send(`Show post with slug: ${req.params.slug}`);
+  //get the post from posts array
+  const post = posts[req.params.slug - 1];
+
+  //return the saved post
+  res.json(post);
 });
 
 //store
